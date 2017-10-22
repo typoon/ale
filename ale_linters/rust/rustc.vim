@@ -15,7 +15,7 @@ function! ale_linters#rust#rustc#RustcCommand(buffer_number) abort
         let l:dependencies = ''
     endif
 
-    return 'rustc --error-format=json -Z no-trans ' . l:dependencies . ' -'
+    return 'rustc --error-format=json ' . l:dependencies . ' -'
 endfunction
 
 call ale#linter#Define('rust', {
